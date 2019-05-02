@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6911428959712606321}
   - component: {fileID: 7669659165707535579}
   - component: {fileID: 1573851154986057464}
+  - component: {fileID: 3323651228301282782}
   - component: {fileID: 6570951155449903324}
   - component: {fileID: 283058850203874802}
   m_Layer: 0
@@ -215,6 +216,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 1
   m_Emitting: 1
+--- !u!114 &3323651228301282782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911428959712606322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76a57b4b18087a4c974b12e9b6978ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaL: -1000
 --- !u!114 &6570951155449903324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDamagingOrHeal: 1
   damageOHeal: 30
+  canvas: {fileID: 0}
 --- !u!65 &283058850203874802
 BoxCollider:
   m_ObjectHideFlags: 0

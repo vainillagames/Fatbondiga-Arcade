@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ManagerEstats : MonoBehaviour {
-    int estats;
+    public static int estats;
     public float rampageTotal=500f;//inicialitzo a 500 pro es podrà modificar
     float rampage;
     float timer;
@@ -43,6 +43,7 @@ public class ManagerEstats : MonoBehaviour {
         rampage =  points;
         imageRampage.rectTransform.localScale =new Vector3( rampage/rampageTotal,1,1);
         Debug.Log("points: "+ points);
+        //controlador de estados TODO mejorarlo
         if ((points / 100.00f) == 1 || (points / 100f )== 2 || (points / 100f) == 3 || (points / 100f) == 4 || (points / 100f) == 5)
         {
             estats++;
@@ -51,9 +52,7 @@ public class ManagerEstats : MonoBehaviour {
         }
 
     }
-    public void DificultadEstados()
-    { //TODO DEPENDIENDO DEL ESTADO AÑADIREMOS NUEVOS PROYECTILES I INCREMENTAREMOS LA VELOCIDAD DE SPAWN DE LOS DICHOS
-    }
+    
     public void DialogoControler()
     {
         //TODO MAS TEXTO I ACTIVAR O DESACTIVAR SPRITES DE LAS CARAS DE CADA PERSONAJE JUNTO CON UN FONDO PARA QUE SE VEA MEJOR LA LETRA

@@ -7,6 +7,7 @@ public class ProyectilesAOD : MonoBehaviour
     public static int points=0;
     public float damageOHeal = 10;//lo empiezo en 10 pero va a variar dependiendo del proyectil o obstaculo o trozo de carne picada
     public GameObject canvas;
+    
    
     
    void Start()
@@ -14,8 +15,10 @@ public class ProyectilesAOD : MonoBehaviour
         
         if(!isDamagingOrHeal)
         {
+           
             canvas = GameObject.Find("Canvas");
         }
+        
     }
     private void OnTriggerEnter(Collider col)
     {

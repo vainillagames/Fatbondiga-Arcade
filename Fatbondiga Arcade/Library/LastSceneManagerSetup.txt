@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/MyScenes/Dise\xF1oLvl2.unity"
+- path: Assets/MyScenes/Prototiping.unity
   isLoaded: 1
   isActive: 1

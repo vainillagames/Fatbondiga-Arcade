@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6911428959712606320}
   - component: {fileID: 6911428959712606321}
   - component: {fileID: 7669659165707535579}
+  - component: {fileID: 8005755304260572353}
+  - component: {fileID: 455163497774970986}
   - component: {fileID: 1510920797690949941}
   - component: {fileID: 1573851154986057464}
   m_Layer: 0
@@ -110,6 +112,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &8005755304260572353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911428959712606322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0926491, z: 1}
+  m_Center: {x: 0, y: -0.04632454, z: 0}
+--- !u!114 &455163497774970986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911428959712606322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76a57b4b18087a4c974b12e9b6978ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaL: -500
 --- !u!114 &1510920797690949941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDamagingOrHeal: 1
   damageOHeal: 40
+  canvas: {fileID: 0}
 --- !u!96 &1573851154986057464
 TrailRenderer:
   serializedVersion: 2

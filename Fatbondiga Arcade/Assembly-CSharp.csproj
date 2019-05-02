@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Menu\MyMenuScript.cs" />
     <Compile Include="Assets\Scripts\PantallaTitulo\IntroGame.cs" />
     <Compile Include="Assets\Scripts\PantallaTitulo\TouchScreen.cs" />
+    <Compile Include="Assets\Scripts\ProyectilesAndObstacles\Proyectiles.cs" />
     <Compile Include="Assets\Scripts\ProyectilesAndObstacles\ProyectilesAOD.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnObjectsScene.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnProyectiles.cs" />

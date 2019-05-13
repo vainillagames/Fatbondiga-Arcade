@@ -15,6 +15,8 @@ public class SpawnProyectiles : MonoBehaviour
     public bool stop;
 
     Vector3 fbPosition;
+    Vector3 pos;
+    Vector3 pos2;//posición dentadura viviente
 
   
     
@@ -48,7 +50,7 @@ public class SpawnProyectiles : MonoBehaviour
             estatsReciber = ManagerEstats.estats;
             
 
-            randProyectil = Random.Range(0, 2); //estatsReciber + 2) linea de codigo a modificar, de momento para testear se queda asi;
+            randProyectil = Random.Range(0, estatsReciber+2); //estatsReciber + 2) linea de codigo a modificar, de momento para testear se queda asi;
             
            
             //Vector3 spawnPosition=new Vector3
@@ -60,7 +62,7 @@ public class SpawnProyectiles : MonoBehaviour
     public void Spawn()
     {
         fbPosition = new Vector3(fb.transform.position.x, gameObject.transform.position.y ,fb.transform.position.z);
-        Vector3 pos = transform.position + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+       pos = transform.position + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
         //switch case 5 al incrementar la dificultad la abuela hace mas ataques
         switch (estatsReciber)
         {
@@ -83,10 +85,104 @@ public class SpawnProyectiles : MonoBehaviour
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
+                
                 else
                     Instantiate(test1[randProyectil], pos, Quaternion.identity); // gameObject.transform.rotation
 
                 break;
+            case 2:
+
+                spawnMostWait = 1.3f;
+                if (randProyectil == 2)
+                {
+                    Debug.Log("instanciate proyectil OJO DE AGUILA");
+                    Instantiate(test1[2], fbPosition, Quaternion.identity);
+                }
+                else if (randProyectil == 3)
+                {
+                    Invoke("CuchillosFantasma", 0.5f);//delay para instanciar el cuchillofantasma para controlar la curva de dificultad
+
+                }
+                else
+                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                break;
+
+            case 3:
+
+                //spawnMostWait = 1.2f;
+                if (randProyectil == 2)
+                {
+                    Debug.Log("instanciate proyectil OJO DE AGUILA");
+                    Instantiate(test1[2], fbPosition, Quaternion.identity);
+                }
+                else if (randProyectil == 3)
+                {
+                    Invoke("CuchillosFantasma", 0.3f);//delay para instanciar el cuchillofantasma para controlar la curva de dificultad
+
+                }
+                else if(randProyectil==4)
+                {
+                    
+                    Invoke("MilHojas", 0.5f);
+                }
+                else
+                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                break;
+            case 4:
+
+               // spawnMostWait = 1.1f;
+                if (randProyectil == 2)
+                {
+                    Debug.Log("instanciate proyectil OJO DE AGUILA");
+                    Instantiate(test1[2], fbPosition, Quaternion.identity);
+                }
+                else if (randProyectil == 3)
+                {
+                    Invoke("CuchillosFantasma", 0.3f);//delay para instanciar el cuchillofantasma para controlar la curva de dificultad
+
+                }
+                else if (randProyectil == 4)
+                {
+
+                    Invoke("MilHojas", 0.5f);
+                }
+                else if (randProyectil == 5)
+
+                {
+                    pos2=  new Vector3(Random.Range(-size.x / 2, size.x / 2)+transform.position.x, 1, Random.Range(-size.z / 2, size.z / 2)+transform.position.z);//dentadura viviente
+                    Instantiate(test1[randProyectil], fbPosition, Quaternion.identity);
+                }
+                else
+                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                break;
+            case 5:
+                //lluvia de de ataques
+                spawnMostWait = 0.8f;
+                if (randProyectil == 2)
+                {
+                    Debug.Log("instanciate proyectil OJO DE AGUILA");
+                    Instantiate(test1[2], fbPosition, Quaternion.identity);
+                }
+                else if (randProyectil == 3)
+                {
+                    Invoke("CuchillosFantasma", 0.3f);//delay para instanciar el cuchillofantasma para controlar la curva de dificultad
+
+                }
+                else if (randProyectil == 4)
+                {
+
+                    Invoke("MilHojas", 0.5f);
+                }
+                else if (randProyectil == 5)
+
+                {
+                    pos2 = new Vector3(Random.Range(-size.x / 2, size.x / 2) + transform.position.x, 1, Random.Range(-size.z / 2, size.z / 2) + transform.position.z);//dentadura viviente
+                    Instantiate(test1[randProyectil], fbPosition, Quaternion.identity);
+                }
+                else
+                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                break;
+
         }
             
         
@@ -95,5 +191,14 @@ public class SpawnProyectiles : MonoBehaviour
     {
         Gizmos.color = new Color(32,8,0,0.5f);
         Gizmos.DrawCube(transform.position, size);
+    }
+    void CuchillosFantasma()
+    {
+        Instantiate(test1[randProyectil], pos, Quaternion.identity);
+
+    }
+    void MilHojas()
+    {
+        //Instantiate(test1[randProyectil], pos, Quaternion.identity);
     }
 }

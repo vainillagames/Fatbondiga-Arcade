@@ -199,6 +199,16 @@ public class SpawnProyectiles : MonoBehaviour
     }
     void MilHojas()
     {
+        Debug.Log("milhojas");
+        for(int j = 0; j<10;j++)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Vector3 positionR = new Vector3(i, 1, j);
+                Instantiate(test1[1],gameObject.transform.position + positionR , Quaternion.identity);//mil hojas
+            }
+        }
+        
         //Instantiate(test1[randProyectil], pos, Quaternion.identity);
     }
 }

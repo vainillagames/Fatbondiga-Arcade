@@ -21,7 +21,7 @@ public class SpawnObjectsScene : MonoBehaviour
                 if (ranR <= 7)
                 {
                     //carn
-                    Vector3 posicionesCarneP = new Vector3(i+offsetx, 0.63f, j+offsetz);
+                    Vector3 posicionesCarneP = new Vector3(i+offsetx, 0.56f, j+offsetz);
                     Instantiate(carnPicada, posicionesCarneP, Quaternion.identity);
                     
                    // Debug.Log("posicions " + posicionesCarneP);
@@ -30,7 +30,7 @@ public class SpawnObjectsScene : MonoBehaviour
                 {
                     //obstacles;
                     ranO = Random.Range(0, 3);
-                    Vector3 posicionesObstaculos = new Vector3(i+offsetx, 1, j+offsetz);
+                    Vector3 posicionesObstaculos = new Vector3(i+offsetx, 0.70f, j+offsetz);
                     Instantiate(obstacles[ranO], posicionesObstaculos, Quaternion.identity);//TODO canviar posicionesObstaculos per gameObject.transform.localposition+ posicionesObstaculos(i,1,j);
                 }
                 

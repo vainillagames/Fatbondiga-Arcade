@@ -48,6 +48,8 @@ public class Proyectiles : MonoBehaviour
     {
         for (int i = 0; i < canonsProyectiles.Length; i++)
         {
+            //int randomCF;
+           // randomCF=Random.Range(0, 1);
             GameObject clone;
             Debug.Log("cuchillos fantasma for" + i);
             //TODO HACER VARIOS PROYECTILESFANTASMA

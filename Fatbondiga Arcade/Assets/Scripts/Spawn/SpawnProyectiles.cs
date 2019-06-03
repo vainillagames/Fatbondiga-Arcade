@@ -200,15 +200,24 @@ public class SpawnProyectiles : MonoBehaviour
     void MilHojas()
     {
         Debug.Log("milhojas");
+        int randomMH;
+       
         for(int j = 0; j<10;j++)
         {
+            
             for (int i = 0; i < 10; i++)
             {
+                randomMH = Random.Range(1, 2);
                 Vector3 positionR = new Vector3(i, 1, j);
-                Instantiate(test1[1],gameObject.transform.position + positionR , Quaternion.identity);//mil hojas
+                Instantiate(test1[randomMH],gameObject.transform.position + positionR , Quaternion.identity);//mil hojas
             }
         }
         
         //Instantiate(test1[randProyectil], pos, Quaternion.identity);
+    }
+    void DentaduraViviente()
+    {
+        Vector3 positionD = new Vector3(Random.Range(-size.x / 2, size.x / 2)+gameObject.transform.position.x, 1,0);
+        Instantiate(test1[4], positionD, Quaternion.identity);
     }
 }

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Fatbondiga\Movimiento.cs" />
     <Compile Include="Assets\Scripts\GameManager\PauseMenuInGame.cs" />
     <Compile Include="Assets\Scripts\Menu\MyMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Menu\Options.cs" />
     <Compile Include="Assets\Scripts\PantallaTitulo\IntroGame.cs" />
     <Compile Include="Assets\Scripts\PantallaTitulo\TouchScreen.cs" />
     <Compile Include="Assets\Scripts\ProyectilesAndObstacles\Proyectiles.cs" />

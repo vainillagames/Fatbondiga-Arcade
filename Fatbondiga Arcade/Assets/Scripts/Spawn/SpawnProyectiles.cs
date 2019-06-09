@@ -13,6 +13,7 @@ public class SpawnProyectiles : MonoBehaviour
     int randProyectil;
     
     public bool stop;
+    bool flagReciver;
 
     Vector3 fbPosition;
     Vector3 pos;
@@ -25,7 +26,7 @@ public class SpawnProyectiles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        flagReciver = true;
         StartCoroutine(waitSpawner());
        
     }
@@ -149,8 +150,7 @@ public class SpawnProyectiles : MonoBehaviour
                 else if (randProyectil == 5)
 
                 {
-                    pos2=  new Vector3(Random.Range(-size.x / 2, size.x / 2)+transform.position.x, 1, Random.Range(-size.z / 2, size.z / 2)+transform.position.z);//dentadura viviente
-                    Instantiate(test1[randProyectil], fbPosition, Quaternion.identity);
+                    Invoke("DentaduraViviente", 0.6f);
                 }
                 else
                     Instantiate(test1[randProyectil], pos, Quaternion.identity);
@@ -170,14 +170,19 @@ public class SpawnProyectiles : MonoBehaviour
                 }
                 else if (randProyectil == 4)
                 {
-
-                    Invoke("MilHojas", 0.5f);
+                  
+                    
+                        Invoke("MilHojas", 0.5f);
+                    
                 }
                 else if (randProyectil == 5)
 
                 {
-                    pos2 = new Vector3(Random.Range(-size.x / 2, size.x / 2) + transform.position.x, 1, Random.Range(-size.z / 2, size.z / 2) + transform.position.z);//dentadura viviente
-                    Instantiate(test1[randProyectil], fbPosition, Quaternion.identity);
+                    if (flagReciver)
+                    {
+                        Invoke("DentaduraViviente", 0.6f);
+                    }
+
                 }
                 else
                     Instantiate(test1[randProyectil], pos, Quaternion.identity);
@@ -202,12 +207,12 @@ public class SpawnProyectiles : MonoBehaviour
         Debug.Log("milhojas");
         int randomMH;
        
-        for(int j = 0; j<10;j++)
+        for(int j = 0; j<5;j++)
         {
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
-                randomMH = Random.Range(1, 2);
+                randomMH = Random.Range(0, 1);
                 Vector3 positionR = new Vector3(i, 1, j);
                 Instantiate(test1[randomMH],gameObject.transform.position + positionR , Quaternion.identity);//mil hojas
             }
@@ -217,7 +222,12 @@ public class SpawnProyectiles : MonoBehaviour
     }
     void DentaduraViviente()
     {
-        Vector3 positionD = new Vector3(Random.Range(-size.x / 2, size.x / 2)+gameObject.transform.position.x, 1,0);
+        Vector3 positionD = new Vector3(Random.Range(-size.x / 2, size.x / 2)+gameObject.transform.position.x, 1,35);
         Instantiate(test1[4], positionD, Quaternion.identity);
+    }
+    public void ResetDentadura()
+    {
+        flagReciver = true;
+
     }
 }

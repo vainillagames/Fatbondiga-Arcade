@@ -6,15 +6,32 @@ public class Proyectiles : MonoBehaviour
     Rigidbody rb;
     public float fuerzaL;
     public int tipoDeProyectil;
+
+    public GameObject spawner;
     
 
     public GameObject[] proyectilesFantasma;
     public Transform[] canonsProyectiles ;
+
+   void Awake()
+    {
+        spawner=GameObject.Find("SpawnProyectilesCocina");
+    }
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0, fuerzaL, 0));
+        if (tipoDeProyectil == 5)
+        {
+            rb = gameObject.GetComponent<Rigidbody>();
+            rb.AddForce(new Vector3(0, 0, -fuerzaL));
+            Invoke("destroyMandibula", 5);
+
+        }
+        else
+        {
+            rb = gameObject.GetComponent<Rigidbody>();
+            rb.AddForce(new Vector3(0, fuerzaL, 0));
+        }
        /* if (tipoDeProyectil == 5)
         {
             rb = gameObject.GetComponent<Rigidbody>();
@@ -43,6 +60,11 @@ public class Proyectiles : MonoBehaviour
     void Update()
     {
         
+    }
+    void destroyMandibula()
+    {
+        spawner.SendMessage("ResetDentadura");
+        Destroy(gameObject);
     }
     void CuchillosFantasma()
     {

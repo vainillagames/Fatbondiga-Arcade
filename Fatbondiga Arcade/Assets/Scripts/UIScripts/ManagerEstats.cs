@@ -42,9 +42,13 @@ public class ManagerEstats : MonoBehaviour {
     {
         rampage =  points;
         imageRampage.rectTransform.localScale =new Vector3( rampage/rampageTotal,1,1);
+        if(rampage<=rampageTotal)
+        {
+            rampage = rampageTotal;
+        }
         Debug.Log("points: "+ points);
         //controlador de estados TODO mejorarlo
-        if ((points / 100.00f) == 1 || (points / 100f )== 2 || (points / 100f) == 3 || (points / 100f) == 4 || (points / 100f) == 5)
+        if ((points / 100.00f) == 1 || (points / 100f )== 2 || (points / 100f) == 3 || (points / 100f) == 4 /*|| (points / 100f) == 5*/)
         {
             estats++;
             DialogoControler();

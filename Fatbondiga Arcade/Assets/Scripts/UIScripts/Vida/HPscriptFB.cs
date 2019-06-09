@@ -29,7 +29,7 @@ public class HPscriptFB : MonoBehaviour
             HP = 0;
             Debug.Log("Dead");
             //TODO HACER TRANSICIONES FADE IN FADE OUT AL MORIR
-            SceneManager.LoadScene("Game Over");
+            //SceneManager.LoadScene("Game Over");
 
         }
         UpdateHPBar();

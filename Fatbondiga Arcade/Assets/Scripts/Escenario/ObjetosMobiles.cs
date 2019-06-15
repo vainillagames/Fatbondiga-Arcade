@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class ObjetosMobiles : MonoBehaviour
@@ -12,8 +11,13 @@ public class ObjetosMobiles : MonoBehaviour
             if (ProyectilesAOD.points >= puntsMaxToOpen)
             {
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                Invoke("destoryObject", 1.5f);
             }
         }
+    }
+    private void destoryObject()
+    {
+        Destroy(gameObject);
     }
 
 

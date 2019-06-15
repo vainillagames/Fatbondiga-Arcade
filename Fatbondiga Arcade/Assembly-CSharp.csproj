@@ -67,10 +67,14 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Camera\CamaraFatbondiga.cs" />
     <Compile Include="Assets\Scripts\Escenario\ObjetosMobiles.cs" />
     <Compile Include="Assets\Scripts\Fatbondiga\DashButton.cs" />
     <Compile Include="Assets\Scripts\Fatbondiga\Movimiento.cs" />
+    <Compile Include="Assets\Scripts\GameManager\ManagerEstats.cs" />
+    <Compile Include="Assets\Scripts\GameManager\MuertePorCaida.cs" />
     <Compile Include="Assets\Scripts\GameManager\PauseMenuInGame.cs" />
     <Compile Include="Assets\Scripts\Menu\MyMenuScript.cs" />
     <Compile Include="Assets\Scripts\Menu\Options.cs" />
@@ -80,7 +84,6 @@
     <Compile Include="Assets\Scripts\ProyectilesAndObstacles\ProyectilesAOD.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnObjectsScene.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnProyectiles.cs" />
-    <Compile Include="Assets\Scripts\UIScripts\ManagerEstats.cs" />
     <Compile Include="Assets\Scripts\UIScripts\Vida\HPscriptFB.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>J:/UOC TFM/ProjecteUnity/Fatbondiga Arcade/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

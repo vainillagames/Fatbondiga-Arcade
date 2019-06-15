@@ -7,9 +7,11 @@ public class SpawnObjectsScene : MonoBehaviour
     public GameObject carnPicada;//només una variació de carn picada
     public float rangeX;
     public float rangeZ;
+    public float gradoDeDificultadDelTerreno;
 
     float positionX;
     float positionZ;
+    float positionY;
 
     int ranR;
     int ranO;
@@ -18,6 +20,7 @@ public class SpawnObjectsScene : MonoBehaviour
     {
         positionX=gameObject.transform.position.x;
         positionZ = gameObject.transform.position.z;
+        positionY = gameObject.transform.position.y;
 
         for (int i = 1; i < rangeX; i+=2)
         {
@@ -25,10 +28,10 @@ public class SpawnObjectsScene : MonoBehaviour
             {
                 ranR = Random.Range(0, 10);
                 //Debug.Log("random " + ranR);
-                if (ranR <= 7)
+                if (ranR <= gradoDeDificultadDelTerreno)
                 {
                     //carn
-                    Vector3 posicionesCarneP = new Vector3(i+positionX, 0.56f, j+positionZ);
+                    Vector3 posicionesCarneP = new Vector3(i+positionX, positionY, j+positionZ);
                     Instantiate(carnPicada, posicionesCarneP, Quaternion.identity);
                     
                    // Debug.Log("posicions " + posicionesCarneP);
@@ -37,7 +40,7 @@ public class SpawnObjectsScene : MonoBehaviour
                 {
                     //obstacles;
                     ranO = Random.Range(0, 3);
-                    Vector3 posicionesObstaculos = new Vector3(i+positionX, 0.70f, j+positionZ);
+                    Vector3 posicionesObstaculos = new Vector3(i+positionX, positionY, j+positionZ);
                     Instantiate(obstacles[ranO], posicionesObstaculos, Quaternion.identity);//TODO canviar posicionesObstaculos per gameObject.transform.localposition+ posicionesObstaculos(i,1,j);
                 }
                 

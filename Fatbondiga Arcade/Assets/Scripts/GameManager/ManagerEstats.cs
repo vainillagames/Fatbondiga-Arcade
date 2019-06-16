@@ -18,7 +18,8 @@ public class ManagerEstats : MonoBehaviour {
     public Text textPoints;
     public Text textTimer;
     public Image imageRampage;
-    public Image[] imagePersonatges;//0 iaia 1 fatbondiga 2 incognita
+    public GameObject imageDialag;
+    public GameObject[] imagePersonatges;//0 iaia 1 fatbondiga 2 incognita
     public Text[] textPersonatges;//0 iaia 1 fatbondiga 2 incognita
 
 
@@ -35,7 +36,7 @@ public class ManagerEstats : MonoBehaviour {
 	void Update ()
     {
         timer += Time.deltaTime;
-        textTimer.text = timer.ToString();
+        textTimer.text = timer.ToString("f2");
         textPoints.text = pointsGet.ToString();
         
 
@@ -69,16 +70,34 @@ public class ManagerEstats : MonoBehaviour {
         switch (estats)
         {
             case 0:
+                imageDialag.SetActive(true);
+                imagePersonatges[1].SetActive(true);
                 textPersonatges[1].text = textFatBondiga[0];
                 Invoke("RespuestaE1", 4);
                 break;
             case 1:
+                imageDialag.SetActive(true);
+                imagePersonatges[0].SetActive(true);
                 textPersonatges[0].text = textIaia[0];
                 Invoke("CleanText", 4);
                 break;
             case 2:
+                imageDialag.SetActive(true);
+                imagePersonatges[1].SetActive(true);
                 textPersonatges[1].text = textFatBondiga[1];
-                Invoke("CleanText", 4);
+                Invoke("RespuestaE2", 4);
+                break;
+            case 3:
+                imageDialag.SetActive(true);
+                imagePersonatges[0].SetActive(true);
+                textPersonatges[0].text = textIaia[2];
+                Invoke("RespuestaE3", 4.5f);
+                break;
+            case 4:
+                imageDialag.SetActive(true);
+                imagePersonatges[1].SetActive(true);
+                textPersonatges[1].text = textFatBondiga[3];
+                Invoke("CleanText", 3);
                 break;
 
 
@@ -86,6 +105,8 @@ public class ManagerEstats : MonoBehaviour {
     }
     void RespuestaE1()
     {
+        imagePersonatges[1].SetActive(false);
+        imagePersonatges[2].SetActive(true);
         textPersonatges[1].text = "";
         textPersonatges[2].text = textIncognita[0];
         Invoke("CleanText",4);
@@ -93,9 +114,28 @@ public class ManagerEstats : MonoBehaviour {
     }
     void RespuestaE2()
     {
+        imagePersonatges[1].SetActive(false);
+        imagePersonatges[2].SetActive(true);
+        textPersonatges[1].text = "";
+        textPersonatges[2].text = textIncognita[1];
+        Invoke("CleanText", 5);
+    }
+    void RespuestaE3()
+    {
+        imagePersonatges[0].SetActive(false);
+        imagePersonatges[1].SetActive(true);
+        textPersonatges[0].text = "";
+        textPersonatges[1].text = textFatBondiga[2];
+        Invoke("CleanText", 4.5f);
+
     }
     void CleanText()
     {
+        imageDialag.SetActive(false);
+        imagePersonatges[0].SetActive(false);
+        imagePersonatges[1].SetActive(false);
+        imagePersonatges[2].SetActive(false);
+
         textPersonatges[0].text = "";
         textPersonatges[1].text = "";
         textPersonatges[2].text = "";

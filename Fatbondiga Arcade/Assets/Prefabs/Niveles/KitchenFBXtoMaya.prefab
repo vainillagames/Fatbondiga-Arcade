@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 736584684}
   m_Layer: 0
   m_Name: ColiderEncimera4
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 1347284993}
   - component: {fileID: 1347284995}
   - component: {fileID: 1347284994}
+  - component: {fileID: 1659310481}
   m_Layer: 0
   m_Name: ObstacleDefinit2
   m_TagString: Untagged
@@ -547,6 +548,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1659310481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347284992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10947803, y: 0.111530066, z: 0.1394329}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0}
 --- !u!1 &1545365393
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +572,7 @@ GameObject:
   - component: {fileID: 1545365394}
   - component: {fileID: 1545365396}
   - component: {fileID: 1545365395}
+  - component: {fileID: 872312109}
   m_Layer: 0
   m_Name: ObstacleDefinit1
   m_TagString: Untagged
@@ -624,6 +639,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &872312109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545365393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09438199, y: 0.10913408, z: 0.14176393}
+  m_Center: {x: 0.000000059604645, y: 0.0000000037252903, z: 0.000000059604645}
 --- !u!1 &1717211063
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +664,7 @@ GameObject:
   - component: {fileID: 1717211065}
   m_Layer: 0
   m_Name: ColiderEncimera3
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,7 +799,7 @@ GameObject:
   - component: {fileID: 1952909925}
   m_Layer: 0
   m_Name: ColiderEncimera2
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1509,7 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496e3aaad39e264590ff3fad5bf73ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntsMaxToOpen: 300
+  puntsMaxToOpen: 1000
 --- !u!1 &2114499437438639999
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,7 +4073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496e3aaad39e264590ff3fad5bf73ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntsMaxToOpen: 0
+  puntsMaxToOpen: 2000
 --- !u!1 &2114499437750609723
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,8 +9115,10 @@ GameObject:
   - component: {fileID: 2114499438291265670}
   - component: {fileID: 2114499438291265668}
   - component: {fileID: 2114499438291265671}
+  - component: {fileID: 2114499438442984832}
+  - component: {fileID: 5822116174540867491}
   m_Layer: 0
-  m_Name: polySurface273
+  m_Name: Agujero Lvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9153,6 +9183,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2114499438442984832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114499438291265673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09310627, y: 0.04998041, z: 0.134546}
+  m_Center: {x: 0, y: -0.050570916, z: 0.016808271}
+--- !u!114 &5822116174540867491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114499438291265673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b591a3f8a0c96a41ba292109ac61dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2114499438310199093
 GameObject:
   m_ObjectHideFlags: 0
@@ -12709,7 +12764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496e3aaad39e264590ff3fad5bf73ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntsMaxToOpen: 0
+  puntsMaxToOpen: 1500
 --- !u!1 &2114499438703672847
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,6 +73,9 @@
     <Compile Include="Assets\Scripts\Escenario\ObjetosMobiles.cs" />
     <Compile Include="Assets\Scripts\Fatbondiga\DashButton.cs" />
     <Compile Include="Assets\Scripts\Fatbondiga\Movimiento.cs" />
+    <Compile Include="Assets\Scripts\GameManager\Continuara.cs" />
+    <Compile Include="Assets\Scripts\GameManager\GetHighScore.cs" />
+    <Compile Include="Assets\Scripts\GameManager\LvlLoader.cs" />
     <Compile Include="Assets\Scripts\GameManager\ManagerEstats.cs" />
     <Compile Include="Assets\Scripts\GameManager\MuertePorCaida.cs" />
     <Compile Include="Assets\Scripts\GameManager\PauseMenuInGame.cs" />

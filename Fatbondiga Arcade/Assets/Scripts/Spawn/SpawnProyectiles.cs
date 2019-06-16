@@ -74,7 +74,8 @@ public class SpawnProyectiles : MonoBehaviour
                 break;
              
             case 0:
-               
+                FindObjectOfType<AudioManager>().Play("cuchillos");
+
                 Instantiate(test1[randProyectil], pos, Quaternion.identity); // gameObject.transform.rotation
 
                 break;
@@ -83,12 +84,14 @@ public class SpawnProyectiles : MonoBehaviour
                 spawnMostWait = 1.5f;// parametro a valancear para hacer la curva de dificultad mejor
                 if (randProyectil == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
                 
                 else
-                    Instantiate(test1[randProyectil], pos, Quaternion.identity); // gameObject.transform.rotation
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
+                Instantiate(test1[randProyectil], pos, Quaternion.identity); // gameObject.transform.rotation
 
                 break;
             case 2:
@@ -96,6 +99,7 @@ public class SpawnProyectiles : MonoBehaviour
                 spawnMostWait = 1.3f;
                 if (randProyectil == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
@@ -105,7 +109,8 @@ public class SpawnProyectiles : MonoBehaviour
 
                 }
                 else
-                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
+                Instantiate(test1[randProyectil], pos, Quaternion.identity);
                 break;
 
             case 3:
@@ -113,6 +118,7 @@ public class SpawnProyectiles : MonoBehaviour
                 //spawnMostWait = 1.2f;
                 if (randProyectil == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
@@ -127,13 +133,15 @@ public class SpawnProyectiles : MonoBehaviour
                     Invoke("MilHojas", 0.5f);
                 }
                 else
-                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
+                Instantiate(test1[randProyectil], pos, Quaternion.identity);
                 break;
             case 4:
 
                // spawnMostWait = 1.1f;
                 if (randProyectil == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
@@ -153,13 +161,15 @@ public class SpawnProyectiles : MonoBehaviour
                     Invoke("DentaduraViviente", 0.6f);
                 }
                 else
-                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
+                Instantiate(test1[randProyectil], pos, Quaternion.identity);
                 break;
             case 5:
                 //lluvia de de ataques
                 spawnMostWait = 0.8f;
                 if (randProyectil == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
                     Debug.Log("instanciate proyectil OJO DE AGUILA");
                     Instantiate(test1[2], fbPosition, Quaternion.identity);
                 }
@@ -185,7 +195,8 @@ public class SpawnProyectiles : MonoBehaviour
 
                 }
                 else
-                    Instantiate(test1[randProyectil], pos, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("cuchillos");
+                Instantiate(test1[randProyectil], pos, Quaternion.identity);
                 break;
 
         }
@@ -199,6 +210,7 @@ public class SpawnProyectiles : MonoBehaviour
     }
     void CuchillosFantasma()
     {
+        FindObjectOfType<AudioManager>().Play("cuchillos");
         Instantiate(test1[randProyectil], pos, Quaternion.identity);
 
     }
@@ -206,8 +218,8 @@ public class SpawnProyectiles : MonoBehaviour
     {
         Debug.Log("milhojas");
         int randomMH;
-       
-        for(int j = 0; j<5;j++)
+        FindObjectOfType<AudioManager>().Play("cuchillos");
+        for (int j = 0; j<5;j++)
         {
             
             for (int i = 0; i < 5; i++)
@@ -222,7 +234,7 @@ public class SpawnProyectiles : MonoBehaviour
     }
     void DentaduraViviente()
     {
-        Vector3 positionD = new Vector3(Random.Range(-size.x / 2, size.x / 2)+gameObject.transform.position.x, 1,35);
+        Vector3 positionD = new Vector3(Random.Range(-size.x / 2, size.x / 2)+gameObject.transform.position.x, 2.1f, 35);
         Instantiate(test1[4], positionD, Quaternion.identity);
     }
     public void ResetDentadura()

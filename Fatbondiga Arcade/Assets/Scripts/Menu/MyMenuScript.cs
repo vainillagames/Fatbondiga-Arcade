@@ -7,13 +7,22 @@ public class MyMenuScript : MonoBehaviour
     bool flagActive=false;
     public void onTouchPlay()
     {
-        SceneManager.LoadScene("Prototiping");
         ProyectilesAOD.points = 0;
+        //optionsOFON.SetActive(true);
+
+        //SceneManager.MoveGameObjectToScene(optionsOFON, SceneManager.GetSceneByBuildIndex(4));
+        SceneManager.LoadScene("Loading");
+        
+
     }
     
     public void onTouchExit()
     {
         Application.Quit();
+    }
+    public void onTouchMenuPrincipal()
+    {
+        SceneManager.LoadScene("Menu");
     }
     public void onTochOptions()
     {

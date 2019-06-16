@@ -15,9 +15,15 @@ EditorBuildSettings:
     path: Assets/MyScenes/Menu.unity
     guid: 36a266d45080ee242ae4c5ecdcdcbb0f
   - enabled: 1
+    path: Assets/MyScenes/Loading.unity
+    guid: 74abd27694ac1464fa77162c1ba701ad
+  - enabled: 1
     path: Assets/MyScenes/Prototiping.unity
     guid: c9c783c79e1fdec4f90069fe947fc348
   - enabled: 1
     path: Assets/MyScenes/Game Over.unity
     guid: 4e600d8356706194e9ec1d3495e5eb38
+  - enabled: 1
+    path: Assets/MyScenes/Continuara.unity
+    guid: 15020e9b5ab57034c958522632b7ac77
   m_configObjects: {}

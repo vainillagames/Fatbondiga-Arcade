@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 311359852611836270}
   - component: {fileID: 2392840362445662619}
   - component: {fileID: 5531254851148784015}
+  - component: {fileID: 2069831640262780629}
   - component: {fileID: 1357013836}
   m_Layer: 0
   m_Name: Mandibula
@@ -178,6 +179,21 @@ MonoBehaviour:
   spawner: {fileID: 0}
   proyectilesFantasma: []
   canonsProyectiles: []
+--- !u!114 &2069831640262780629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311359852611836268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c7e4903f8dddd41877f5e6942d2b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDamagingOrHeal: 1
+  damageOHeal: 20
+  canvas: {fileID: 0}
 --- !u!54 &1357013836
 Rigidbody:
   m_ObjectHideFlags: 0

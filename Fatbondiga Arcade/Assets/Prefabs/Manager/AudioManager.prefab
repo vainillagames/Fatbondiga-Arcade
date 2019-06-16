@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3431642492990903461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3431642492990903463}
+  - component: {fileID: 3431642492990903462}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3431642492990903463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431642492990903461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.39136, y: 27.15329, z: -2.9008904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3431642492990903462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431642492990903461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ae896fab654744c8a914203b10abcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: muerteCaida
+    clip: {fileID: 8300000, guid: 9f02323a69d86fe4e84e026f34018471, type: 3}
+    volume: 0.691
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}
+  - name: lvl1music
+    clip: {fileID: 8300000, guid: 10cf79aa5e563d5439bac97b77a31c29, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 1
+    mixerTHeme: {fileID: 24300002, guid: 94e15a3650957a442939292eb53767e8, type: 2}
+    source: {fileID: 0}
+  - name: muerte
+    clip: {fileID: 8300000, guid: 281637b9e2e26044280527dbf6f8f492, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}
+  - name: dash
+    clip: {fileID: 8300000, guid: d5695cafe92494a48a582ef9c6953af2, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}
+  - name: cuchillos
+    clip: {fileID: 8300000, guid: e5b6e9d71d830b6439dd9c2fe1eeb541, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}
+  - name: hit
+    clip: {fileID: 8300000, guid: a42f8289f22236149a07367a27618141, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}
+  - name: eat
+    clip: {fileID: 8300000, guid: 0f5bdcfd918f08c4f88b6af3e8d0f389, type: 3}
+    volume: 0.493
+    pitch: 1
+    loop: 0
+    mixerTHeme: {fileID: 24300002, guid: 3122cc47797d2d04b82b0c79904836c5, type: 2}
+    source: {fileID: 0}

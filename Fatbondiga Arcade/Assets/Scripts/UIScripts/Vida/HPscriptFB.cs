@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class HPscriptFB : MonoBehaviour
 {
     public Image currentHPbar;
-
+    int puntuacion;
     private float HP = 100;
     private float maxHP = 100;
 
@@ -23,19 +23,37 @@ public class HPscriptFB : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
+        FindObjectOfType<AudioManager>().Play("hit");
         HP -= damage;
         if (HP < 0)
         {
             HP = 0;
             Debug.Log("Dead");
             //TODO HACER TRANSICIONES FADE IN FADE OUT AL MORIR
-            //SceneManager.LoadScene("Game Over");
+            puntuacion = ProyectilesAOD.points;
+
+            if (PlayerPrefs.HasKey("HighScore"))
+            {
+                if (PlayerPrefs.GetInt("HighScore") < puntuacion)
+                {
+                    PlayerPrefs.SetInt("HighScore", puntuacion);
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetInt("HighScore", puntuacion);
+            }
+            PlayerPrefs.SetInt("GameScore", puntuacion);
+            FindObjectOfType<AudioManager>().Play("muerte");
+            Invoke("muerteDelay", 0.5f);
+            
 
         }
         UpdateHPBar();
     }
     private void HealFB(float heal)
     {
+        FindObjectOfType<AudioManager>().Play("eat");
         HP += heal;
         if(HP>maxHP)
         {
@@ -43,5 +61,9 @@ public class HPscriptFB : MonoBehaviour
         }
         UpdateHPBar();
 
+    }
+    private void muerteDelay()
+    {
+        SceneManager.LoadScene("Game Over");
     }
 }

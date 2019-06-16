@@ -6,7 +6,7 @@ public class Proyectiles : MonoBehaviour
     Rigidbody rb;
     public float fuerzaL;
     public int tipoDeProyectil;
-
+    public float fuerzaCuchillas;
     public GameObject spawner;
     
 
@@ -76,7 +76,7 @@ public class Proyectiles : MonoBehaviour
             Debug.Log("cuchillos fantasma for" + i);
             //TODO HACER VARIOS PROYECTILESFANTASMA
              clone=Instantiate(proyectilesFantasma[0], canonsProyectiles[i].position, canonsProyectiles[i].rotation);
-            clone.GetComponent<Rigidbody>().AddRelativeForce(0, 0, 2000);
+            clone.GetComponent<Rigidbody>().AddRelativeForce(0, 0, fuerzaCuchillas);
             // Instantiate(proyectilesFantasma[0], canonsProyectiles[i].position, canonsProyectiles[i].rotation);
             //clone.GetComponent<Rigidbody>().velocity = transform.TransformVector(Vector3.forward * 10);
 

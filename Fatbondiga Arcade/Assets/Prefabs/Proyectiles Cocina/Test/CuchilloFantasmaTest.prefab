@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1510920797690949941}
   - component: {fileID: 1573851154986057464}
   m_Layer: 0
-  m_Name: Test4
+  m_Name: CuchilloFantasmaTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 6911428959712606322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10.92, z: 0}
-  m_LocalScale: {x: 0.5, y: 5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5416600384024005328}
   - {fileID: 1164820748813999326}
@@ -293,7 +293,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6911428959712606322}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 95c883da641c41246be8c42e2ccaee18, type: 3}
 --- !u!23 &6911428959712606320
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -342,8 +342,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.766779, z: 1}
+  m_Center: {x: 0, y: -0.023975372, z: 0}
 --- !u!54 &7669659165707535579
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -371,8 +371,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0926491, z: 1}
-  m_Center: {x: 0, y: -0.04632454, z: 0}
+  m_Size: {x: 1, y: 2.085515, z: 1}
+  m_Center: {x: 0, y: -0.1833024, z: 0}
 --- !u!114 &455163497774970986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuerzaL: -1100
   tipoDeProyectil: 4
+  fuerzaCuchillas: 500
+  spawner: {fileID: 0}
   proyectilesFantasma:
   - {fileID: 5615377707175422550, guid: f84669fd0997d384390ab2f11fc89e72, type: 3}
   canonsProyectiles:
